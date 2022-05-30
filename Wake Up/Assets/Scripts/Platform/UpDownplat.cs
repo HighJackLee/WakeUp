@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class UpDownplat : MonoBehaviour
 {
-    float UpMax = 5.0f;
-    float DownMax = -1.0f;
+    float UpMax;
+    float DownMax;
+    float startY;
     float currentXPosition;
     float currentYPosition;
     float direction = 1.0f;
@@ -14,11 +15,14 @@ public class UpDownplat : MonoBehaviour
     {
         currentXPosition = transform.position.x;
         currentYPosition = transform.position.y;
+        startY = currentYPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
+        UpMax = startY + 8;
+        DownMax = startY - 8;
         currentYPosition += Time.deltaTime * direction;
         if (currentYPosition >= UpMax)
         {

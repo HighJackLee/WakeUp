@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class SideMoveplat : MonoBehaviour
 {
-    float RightMax = 5.0f;
-    float LeftMax = -7.0f;
+    float RightMax;
+    float LeftMax;
+    float startX;
     float currentXPosition;
     float currentYPosition;
     float direction = 1.0f;
@@ -14,11 +15,14 @@ public class SideMoveplat : MonoBehaviour
     {
         currentXPosition = transform.position.x;
         currentYPosition = transform.position.y;
+        startX = currentXPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
+        RightMax = startX + 6;
+        LeftMax = startX - 6;
         currentXPosition += Time.deltaTime * direction;
         if (currentXPosition >= RightMax)
         {

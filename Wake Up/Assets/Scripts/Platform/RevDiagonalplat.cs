@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Diagonalplat : MonoBehaviour
+public class RevDiagonalplat : MonoBehaviour
 {
     float RightMax;
     float LeftMax;
@@ -27,17 +27,17 @@ public class Diagonalplat : MonoBehaviour
     {
         UpMax = startY + 5;
         DownMax = startY - 5;
-        RightMax = startX + 5;
-        LeftMax = startX - 5;
-        currentXPosition += Time.deltaTime * direction;
+        RightMax = startX - 5;
+        LeftMax = startX + 5;
+        currentXPosition -= Time.deltaTime * direction;
         currentYPosition += Time.deltaTime * direction;
-        if (currentXPosition >= RightMax && currentYPosition >= UpMax)
+        if (currentXPosition <= RightMax && currentYPosition >= UpMax)
         {
             direction *= -1;
             currentXPosition = RightMax;
             currentYPosition = UpMax;
         }
-        else if (currentXPosition <= LeftMax && currentYPosition <= DownMax)
+        else if (currentXPosition >= LeftMax && currentYPosition <= DownMax)
         {
             direction *= -1;
             currentXPosition = LeftMax;
