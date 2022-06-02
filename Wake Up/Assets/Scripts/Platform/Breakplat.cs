@@ -13,10 +13,10 @@ public class Breakplat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerControll.isBreak != false)
-        {
-            Destroy(gameObject);
-            PlayerControll.isBreak = false;
-        }
+        //if (PlayerControll.isBreak != false)
+        //{
+        //    Destroy(gameObject);
+        //    PlayerControll.isBreak = false;
+        //}
     }
 }

@@ -20,12 +20,12 @@ public class BreakandRemakeplat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PlayerControll.isBreak != false)
-        {
-            Destroy(gameObject);
-            PlayerControll.isBreak = false;
-            timer += Time.deltaTime;
-        }
+        //if (PlayerControll.isBreak != false)
+        //{
+        //    Destroy(gameObject);
+        //    PlayerControll.isBreak = false;
+        //    timer += Time.deltaTime;
+        //}
 
         if(timer >= this.spawn)
         {
