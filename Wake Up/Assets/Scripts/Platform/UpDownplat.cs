@@ -9,7 +9,7 @@ public class UpDownplat : MonoBehaviour
     float startY;
     float currentXPosition;
     float currentYPosition;
-    float direction = 1.0f;
+    float direction = 2.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +21,8 @@ public class UpDownplat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpMax = startY + 8;
-        DownMax = startY - 8;
+        UpMax = startY + 10;
+        DownMax = startY - 10;
         currentYPosition += Time.deltaTime * direction;
         if (currentYPosition >= UpMax)
         {

@@ -8,7 +8,7 @@ public class DownCrashplat : MonoBehaviour
     float startY;
     float currentXPosition;
     float currentYPosition;
-    float direction = 1.0f;
+    float direction = 2.0f;
     float timer;
     float waiting = 4.0f;
     // Start is called before the first frame update

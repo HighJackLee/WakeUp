@@ -25,10 +25,10 @@ public class RevDiagonalplat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpMax = startY + 5;
-        DownMax = startY - 5;
-        RightMax = startX - 5;
-        LeftMax = startX + 5;
+        UpMax = startY + 10;
+        DownMax = startY - 10;
+        RightMax = startX - 10;
+        LeftMax = startX + 10;
         currentXPosition -= Time.deltaTime * direction;
         currentYPosition += Time.deltaTime * direction;
         if (currentXPosition <= RightMax && currentYPosition >= UpMax)
