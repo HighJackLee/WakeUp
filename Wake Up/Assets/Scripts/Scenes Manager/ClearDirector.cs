@@ -17,7 +17,7 @@ public class ClearDirector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("FirstScene");
+            SceneManager.LoadScene("StageSelectScene");
         }
     }
 }
