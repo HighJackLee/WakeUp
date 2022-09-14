@@ -4,33 +4,25 @@ using UnityEngine;
 
 public class BreakandRemakeplat : MonoBehaviour
 {
-    public GameObject BRPlatPrefab;
-    float currentXPosition;
-    float currentYPosition;
-    float timer;
-    float spawn = 5.0f;
+    public static float currentXPosition;
+    public static float currentYPosition;
+    public static bool isBRPDestroy = false;
+
     // Start is called before the first frame update
     void Start()
     {
         currentXPosition = transform.position.x;
         currentYPosition = transform.position.y;
-        timer = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (PlayerControll.isBreak != false)
-        //{
-        //    Destroy(gameObject);
-        //    PlayerControll.isBreak = false;
-        //    timer += Time.deltaTime;
-        //}
-
-        if(timer >= this.spawn)
+        if (Player.isBreak2 != false)
         {
-            GameObject BRP = Instantiate(BRPlatPrefab) as GameObject;
-            BRP.transform.position = new Vector3(currentXPosition, currentYPosition, 0);
+            Destroy(gameObject);
+            Player.isBreak2 = false;
+            isBRPDestroy = true;
         }
     }
 }

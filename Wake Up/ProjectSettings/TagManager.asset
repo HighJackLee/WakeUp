@@ -6,6 +6,8 @@ TagManager:
   tags:
   - break
   - clearwarp
+  - ground
+  - break2
   layers:
   - Default
   - TransparentFX

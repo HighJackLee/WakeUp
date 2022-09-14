@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
 
     public float jumpPower;
     public bool isJump = false;
+    public static bool isBreak = false;
+    public static bool isBreak2 = false;
 
     float horizontal;
     public Animator anim;
@@ -72,6 +74,14 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag.Equals("ground"))
         {
             isJump = false;
+        }
+        if (other.gameObject.tag.Equals("break"))
+        {
+            isBreak = true;
+        }
+        if (other.gameObject.tag.Equals("break2"))
+        {
+            isBreak2 = true;
         }
     }
     void OnTriggerEnter2D(Collider2D other)
