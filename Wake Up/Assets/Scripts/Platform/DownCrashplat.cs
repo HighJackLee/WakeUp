@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DownCrashplat : MonoBehaviour
 {
+    // 위에서 내려오는 부딪히면 사망하는 발판
     float DownMax;
     float startY;
     float currentXPosition;

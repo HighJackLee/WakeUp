@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Breakplat : MonoBehaviour
 {
+    // 닿으면 부서지는 발판
     float timer;
     float waiting = 3.0f;
     // Start is called before the first frame update

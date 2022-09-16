@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BreakandRemakeplat : MonoBehaviour
 {
+    // 닿으면 부서졌다가 재생성 되는 발판
     public static float currentXPosition;
     public static float currentYPosition;
     public static bool isBRPDestroy = false;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RevDiagonalplat : MonoBehaviour
 {
+    // 좌상 우하로 움직이는 발판
     float RightMax;
     float LeftMax;
     float UpMax;

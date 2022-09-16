@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class HTPDirector : MonoBehaviour
 {
+    // 플레이 방법 화면
     // Start is called before the first frame update
     void Start()
     {

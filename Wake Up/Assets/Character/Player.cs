@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public bool isJump = false;
     public static bool isBreak = false;
     public static bool isBreak2 = false;
+    public static bool isClear1 = false;
 
     float horizontal;
     public Animator anim;
@@ -88,6 +89,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag.Equals("clearwarp"))
         {
+            isClear1 = true;
             SceneManager.LoadScene("ClearScene");
         }
         if (other.gameObject.name.Equals("Death"))

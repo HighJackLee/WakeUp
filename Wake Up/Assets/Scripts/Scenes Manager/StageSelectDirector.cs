@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StageSelectDirector : MonoBehaviour
 {
+    // 스테이지 선택 화면
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +26,17 @@ public class StageSelectDirector : MonoBehaviour
 
     public void Stage2Down()
     {
-        SceneManager.LoadScene("Stage2");
+        if(Player.isClear1 != false)
+        {
+            SceneManager.LoadScene("Stage2");
+        }
     }
 
     public void Stage3Down()
     {
-        SceneManager.LoadScene("Stage3");
+        if (Player.isClear1 != false)
+        {
+            SceneManager.LoadScene("Stage3");
+        }
     }
 }

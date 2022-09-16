@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SideMoveplat : MonoBehaviour
 {
+    // 오른쪽 왼쪽으로 움직이는 발판
     float RightMax;
     float LeftMax;
     float startX;

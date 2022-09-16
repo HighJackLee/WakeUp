@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Diagonalplat : MonoBehaviour
 {
+    // 우상 좌하로 움직이는 발판
     float RightMax;
     float LeftMax;
     float UpMax;

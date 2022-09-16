@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UpDownplat : MonoBehaviour
 {
+    // 위아래로 움직이는 발판
     float UpMax;
     float DownMax;
     float startY;
