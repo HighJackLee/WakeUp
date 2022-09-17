@@ -8,6 +8,8 @@ TagManager:
   - clearwarp
   - ground
   - break2
+  - crash
+  - spike
   layers:
   - Default
   - TransparentFX

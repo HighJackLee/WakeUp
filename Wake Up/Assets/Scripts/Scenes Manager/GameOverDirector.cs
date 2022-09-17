@@ -18,7 +18,7 @@ public class GameOverDirector : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("StageSelectScene");
+            SceneManager.LoadScene("Stage1");
         }
     }
 }

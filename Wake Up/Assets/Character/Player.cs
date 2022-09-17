@@ -96,5 +96,13 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("GameOverScene");
         }
+        if (other.gameObject.name.Equals("crash"))
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
+        if (other.gameObject.name.Equals("spike"))
+        {
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 }
