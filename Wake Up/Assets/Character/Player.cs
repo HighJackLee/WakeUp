@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     public float jumpPower;
     public bool isJump = false;
-    public static bool isBreak = false;
+    //public static bool isBreak = false;
     public static bool isBreak2 = false;
     public static bool isClear1 = false;
 
@@ -76,10 +76,10 @@ public class Player : MonoBehaviour
         {
             isJump = false;
         }
-        if (other.gameObject.tag.Equals("break"))
-        {
-            isBreak = true;
-        }
+        //if (other.gameObject.tag.Equals("break"))
+        //{
+        //    isBreak = true;
+        //}
         if (other.gameObject.tag.Equals("break2"))
         {
             isBreak2 = true;

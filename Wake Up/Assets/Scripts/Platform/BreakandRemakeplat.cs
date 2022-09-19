@@ -8,6 +8,7 @@ public class BreakandRemakeplat : MonoBehaviour
     public static float currentXPosition;
     public static float currentYPosition;
     public static bool isBRPDestroy = false;
+    //bool isplayer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,4 +27,12 @@ public class BreakandRemakeplat : MonoBehaviour
             isBRPDestroy = true;
         }
     }
+
+    //void OnCollisionEnter2D(Collision2D other)
+    //{
+    //    if (other.gameObject.tag.Equals("Player"))
+    //    {
+    //        isplayer = true;
+    //    }
+    //}
 }

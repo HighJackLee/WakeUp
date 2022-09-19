@@ -7,7 +7,7 @@ public class PlatGenerater : MonoBehaviour
     // 발판 재생성기
     public GameObject BRPlatPrefab;
     float timer = 0;
-    float spawn = 5.0f;
+    float spawn = 4.0f;
 
     // Start is called before the first frame update
     void Start()
