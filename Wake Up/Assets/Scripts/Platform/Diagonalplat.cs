@@ -13,7 +13,7 @@ public class Diagonalplat : MonoBehaviour
     float startX;
     float currentXPosition;
     float currentYPosition;
-    float direction = 2.0f;
+    float direction = 4.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,10 +26,10 @@ public class Diagonalplat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UpMax = startY + 10;
-        DownMax = startY - 10;
-        RightMax = startX + 10;
-        LeftMax = startX - 10;
+        UpMax = startY + 5;
+        DownMax = startY - 5;
+        RightMax = startX + 5;
+        LeftMax = startX - 5;
         currentXPosition += Time.deltaTime * direction;
         currentYPosition += Time.deltaTime * direction;
         if (currentXPosition >= RightMax && currentYPosition >= UpMax)

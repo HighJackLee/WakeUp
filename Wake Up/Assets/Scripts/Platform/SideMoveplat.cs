@@ -10,7 +10,7 @@ public class SideMoveplat : MonoBehaviour
     float startX;
     float currentXPosition;
     float currentYPosition;
-    float direction = 2.0f;
+    float direction = 4.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +22,8 @@ public class SideMoveplat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RightMax = startX + 10;
-        LeftMax = startX - 10;
+        RightMax = startX + 5;
+        LeftMax = startX - 5;
         currentXPosition += Time.deltaTime * direction;
         if (currentXPosition >= RightMax)
         {

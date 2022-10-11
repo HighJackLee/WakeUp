@@ -9,9 +9,10 @@ public class DownCrashplat : MonoBehaviour
     float startY;
     float currentXPosition;
     float currentYPosition;
-    float direction = 2.0f;
+    float direction = 5.0f;
     float timer;
-    float waiting = 4.0f;
+    float waiting = 3.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class DownCrashplat : MonoBehaviour
         startY = currentYPosition;
         timer = 0;
     }
-
+    // 내려오는 속도와 올라가는 속도를 다르게
     // Update is called once per frame
     void Update()
     {
@@ -32,12 +33,14 @@ public class DownCrashplat : MonoBehaviour
             currentYPosition = DownMax;
             if(timer >= this.waiting)
             {
-                direction *= -1;
+                direction = -3.0f;
+                //direction *= -1;
             }
         }
         else if (currentYPosition >= startY)
         {
-            direction *= -1;
+            direction = 5.0f;
+            //direction *= -1;
             currentYPosition = startY;
             timer = 0;
         }

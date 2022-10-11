@@ -8,6 +8,7 @@ public class PlatGenerater : MonoBehaviour
     public GameObject BRPlatPrefab;
     float timer = 0;
     float spawn = 4.0f;
+    public static bool isBRPGenerate = true;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class PlatGenerater : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(BreakandRemakeplat.isBRPDestroy != false)
+        if (BreakandRemakeplat.isBRPDestroy != false)
         {
             this.timer += Time.deltaTime;
 
@@ -26,6 +27,7 @@ public class PlatGenerater : MonoBehaviour
                 this.timer = 0;
                 GameObject BRP = Instantiate(BRPlatPrefab) as GameObject;
                 BRP.transform.position = new Vector3(BreakandRemakeplat.currentXPosition, BreakandRemakeplat.currentYPosition, 0);
+                isBRPGenerate = true;
             }
 
             BreakandRemakeplat.isBRPDestroy = false;

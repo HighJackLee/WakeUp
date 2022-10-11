@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class BreakandRemakeplat : MonoBehaviour
 {
-    // 닿으면 부서졌다가 재생성 되는 발판
+    // 알아서 부서졌다가 재생성 되는 발판
     public static float currentXPosition;
     public static float currentYPosition;
+    //float timer = 0;
+    //float dest = 2.0f;
     public static bool isBRPDestroy = false;
     //bool isplayer = false;
 
@@ -15,17 +17,25 @@ public class BreakandRemakeplat : MonoBehaviour
     {
         currentXPosition = transform.position.x;
         currentYPosition = transform.position.y;
+        Destroy(gameObject);
+        isBRPDestroy = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Player.isBreak2 != false)
-        {
-            Destroy(gameObject);
-            Player.isBreak2 = false;
-            isBRPDestroy = true;
-        }
+        //if (PlatGenerater.isBRPGenerate != false)
+        //{
+        //    this.timer += Time.deltaTime;
+
+        //    if (this.timer > dest)
+        //    {
+        //        Destroy(gameObject);
+        //        isBRPDestroy = true;
+        //        this.timer = 0;
+        //    }
+        //    PlatGenerater.isBRPGenerate = false;
+        //}
     }
 
     //void OnCollisionEnter2D(Collision2D other)
