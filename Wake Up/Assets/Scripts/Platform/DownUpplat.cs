@@ -2,16 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DownCrashplat : MonoBehaviour
+public class DownUpplat : MonoBehaviour
 {
-    // 위에서 내려오는 부딪히면 사망하는 발판
+    // 아래위로 움직이는 발판
+    float UpMax;
     float DownMax;
     float startY;
     float currentXPosition;
     float currentYPosition;
-    float direction = 4.5f;
-    float timer;
-    float waiting = 3.5f;
+    float direction = -4.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,30 +18,23 @@ public class DownCrashplat : MonoBehaviour
         currentXPosition = transform.position.x;
         currentYPosition = transform.position.y;
         startY = currentYPosition;
-        timer = 0;
     }
-    // 내려오는 속도와 올라가는 속도를 다르게
+
     // Update is called once per frame
     void Update()
     {
+        UpMax = startY + 5;
         DownMax = startY - 5;
-        currentYPosition -= Time.deltaTime * direction;
+        currentYPosition += Time.deltaTime * direction;
         if (currentYPosition <= DownMax)
         {
-            timer += Time.deltaTime;
+            direction *= -1;
             currentYPosition = DownMax;
-            if(timer >= this.waiting)
-            {
-                direction = -3.0f;
-                //direction *= -1;
-            }
         }
-        else if (currentYPosition >= startY)
+        else if (currentYPosition >= UpMax)
         {
-            direction = 4.5f;
-            //direction *= -1;
-            currentYPosition = startY;
-            timer = 0;
+            direction *= -1;
+            currentYPosition = UpMax;
         }
         transform.position = new Vector3(currentXPosition, currentYPosition, 0);
     }
