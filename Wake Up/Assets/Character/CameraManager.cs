@@ -18,7 +18,7 @@ public class CameraManager : MonoBehaviour
     {
         if(target.gameObject != null)
         {
-            targetPosition.Set(target.transform.position.x + 5, target.transform.position.y + 3, this.transform.position.z);
+            targetPosition.Set(target.transform.position.x + 5, target.transform.position.y + 2, this.transform.position.z);
 
             this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, moveSpeed * Time.deltaTime);
         }

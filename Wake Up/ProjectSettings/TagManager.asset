@@ -9,6 +9,7 @@ TagManager:
   - ground
   - crash
   - spike
+  - key
   layers:
   - Default
   - TransparentFX

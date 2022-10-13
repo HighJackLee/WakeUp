@@ -14,16 +14,19 @@ public class Player : MonoBehaviour
     public float jumpPower;
     public bool isJump = false;
     public static bool isClear1 = false;
+    public int key;
 
     float horizontal;
     public Animator anim;
     public SpriteRenderer rend;
+    
 
     void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
+        key = 0;
     }
 
     private void Update()
@@ -74,25 +77,34 @@ public class Player : MonoBehaviour
         {
             isJump = false;
         }
+        if (other.gameObject.tag.Equals("break"))
+        {
+            isJump = false;
+        }
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("clearwarp"))
+        if (other.gameObject.tag.Equals("key"))
         {
+            key++;
+        }
+        if (other.gameObject.tag.Equals("clearwarp") && key == 3)
+        { 
             isClear1 = true;
             SceneManager.LoadScene("ClearScene");
         }
-        if (other.gameObject.name.Equals("Death"))
+        if (other.gameObject.tag.Equals("Death"))
         {
             SceneManager.LoadScene("GameOverScene");
         }
-        if (other.gameObject.name.Equals("crash"))
+        if (other.gameObject.tag.Equals("crash"))
         {
             SceneManager.LoadScene("GameOverScene");
         }
-        if (other.gameObject.name.Equals("spike"))
+        if (other.gameObject.tag.Equals("spike"))
         {
             SceneManager.LoadScene("GameOverScene");
         }
+        
     }
 }
