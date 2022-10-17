@@ -10,6 +10,8 @@ TagManager:
   - crash
   - spike
   - key
+  - block
+  - switch
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public bool isJump = false;
     public static bool isClear1 = false;
     public int key;
+    public static bool isSwitch = false;
 
     float horizontal;
     public Animator anim;
@@ -87,6 +88,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag.Equals("key"))
         {
             key++;
+        }
+        if (other.gameObject.tag.Equals("switch"))
+        {
+            isSwitch = true;
         }
         if (other.gameObject.tag.Equals("clearwarp") && key == 3)
         { 
