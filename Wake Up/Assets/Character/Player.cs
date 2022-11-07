@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public static bool isClear1 = false;
     public int key;
     public static bool isSwitch = false;
+    public string restart;
 
     float horizontal;
     public Animator anim;
@@ -27,6 +28,7 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
+        restart = StageDirector.stagename;
         key = 0;
     }
 
@@ -34,6 +36,10 @@ public class Player : MonoBehaviour
     {
         PlayerMove();
         Jump();
+        if (Input.GetKeyDown("r"))
+        {
+            SceneManager.LoadScene(restart);
+        }
     }
     
     void PlayerMove()
