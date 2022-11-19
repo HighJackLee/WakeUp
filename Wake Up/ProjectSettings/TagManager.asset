@@ -12,6 +12,8 @@ TagManager:
   - key
   - block
   - switch
+  - rotate
+  - roswitch
   layers:
   - Default
   - TransparentFX

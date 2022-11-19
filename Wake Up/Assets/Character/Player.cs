@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public static bool isClear1 = false;
     public int key;
     public static bool isSwitch = false;
+    public static bool isRSwitch = false;
     public string restart;
 
     float horizontal;
@@ -98,6 +99,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag.Equals("switch"))
         {
             isSwitch = true;
+        }
+        if (other.gameObject.tag.Equals("roswitch"))
+        {
+            isRSwitch = true;
         }
         if (other.gameObject.tag.Equals("clearwarp") && key == 3)
         { 

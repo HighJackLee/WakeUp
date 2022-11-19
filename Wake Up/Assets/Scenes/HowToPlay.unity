@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -400}
+  m_AnchoredPosition: {x: 0, y: -450}
   m_SizeDelta: {x: 1000, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &110271788
@@ -536,7 +536,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -120}
+  m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 1300, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090229031
@@ -572,10 +572,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC88C\uC6B0 \uD654\uC0B4\uD45C\uB97C \uB20C\uB7EC \uC774\uB3D9\uD558\uBA70\n\uC704
-    \uD654\uC0B4\uD45C\uB97C \uB20C\uB7EC \uC810\uD504\uD569\uB2C8\uB2E4.\n\n\uBAA8\uB4E0
-    \uC5F4\uC1E0\uB97C \uC5BB\uC5B4\n\uD074\uB9AC\uC5B4 \uC6CC\uD504\uC5D0 \uB3C4\uB2EC\uD558\uBA74\n\uC2A4\uD14C\uC774\uC9C0\uAC00
-    \uD074\uB9AC\uC5B4 \uB429\uB2C8\uB2E4."
+  m_Text: "\u2190 \u2192 = \uC774\uB3D9\n\u2191 = \uC810\uD504\nR\uD0A4 = \uC2A4\uD14C\uC774\uC9C0
+    \uC7AC\uC2DC\uC791\n\n\uBAA8\uB4E0 \uC5F4\uC1E0\uB97C \uC5BB\uC5B4\n\uD074\uB9AC\uC5B4
+    \uC6CC\uD504\uC5D0 \uB3C4\uB2EC\uD558\uBA74\n\uC2A4\uD14C\uC774\uC9C0\uAC00 \uD074\uB9AC\uC5B4
+    \uB429\uB2C8\uB2E4."
 --- !u!222 &1090229032
 CanvasRenderer:
   m_ObjectHideFlags: 0
