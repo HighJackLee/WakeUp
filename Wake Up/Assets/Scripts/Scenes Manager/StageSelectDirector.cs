@@ -26,7 +26,7 @@ public class StageSelectDirector : MonoBehaviour
 
     public void Stage2Down()
     {
-        if(Player.isClear1 != false)
+        if(ClearDirector.isClear1 != false)
         {
             SceneManager.LoadScene("Stage2");
         }
@@ -34,7 +34,7 @@ public class StageSelectDirector : MonoBehaviour
 
     public void Stage3Down()
     {
-        if (Player.isClear1 != false)
+        if (ClearDirector.isClear1 != false && ClearDirector.isClear2 != false)
         {
             SceneManager.LoadScene("Stage3");
         }

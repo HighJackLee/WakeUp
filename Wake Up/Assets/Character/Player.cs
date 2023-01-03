@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
 
     public float jumpPower;
     public bool isJump = false;
-    public static bool isClear1 = false;
     public int key;
     public static bool isSwitch = false;
     public static bool isRSwitch = false;
@@ -106,7 +105,6 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.tag.Equals("clearwarp") && key == 3)
         { 
-            isClear1 = true;
             SceneManager.LoadScene("ClearScene");
         }
         if (other.gameObject.tag.Equals("Death"))
